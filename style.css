@@ -1,0 +1,83 @@
+/*
+Theme Name: Shortlist Demo
+Description: Simple demo theme developed by Astronaut Web Co
+Author: Tim Holt
+Author URI: http://astronautweb.co/
+*/
+
+/*@import();*/
+
+body {
+	width: 80%;
+	max-width: 800px;
+	margin: 1em auto;
+}
+
+ul.items {
+	list-style: none;
+	text-align: left;
+	font-size: 0;
+	margin: -10px;
+	padding: 0;
+}
+
+.items li {
+	display: inline-block;
+	font-size: 16px;
+	position: relative;
+	margin: 10px;
+}
+
+.items li img {
+	margin-bottom: 30px;
+}
+
+.items li .btn {
+	position: absolute;
+	padding: 0;
+ 	top: -10px;
+ 	right: -10px;
+	font-size: 0;
+}
+
+.items li.selected .btn.add {
+	display: none;
+}
+
+.items li .btn.selected,
+.items li .btn.remove {
+	display: none;
+}
+
+.items li.selected .btn.selected {
+	display: block;
+}
+
+.items li.selected:hover .btn.remove {
+	display: block;
+	top: 15px;
+}
+
+.items li .btn .glyphicon {
+	font-size: 20px;
+}
+
+.items li .btn.add .glyphicon {
+	color: #428bca;
+}
+
+.items li .btn.remove .glyphicon {
+	color: #d9534f;
+}
+
+.items li .btn.selected .glyphicon {
+	color: #4cae4c;
+}
+
+.page-template-shortlist-php .items li .btn.remove {
+	top: -10px;
+	bottom: auto;
+	right: -10px;
+	display: block;
+}
+
