@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title><?php wp_title(); ?></title>
+	<!--[if lt IE 9]> 
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<?php wp_head(); ?>
