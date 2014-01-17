@@ -1,0 +1,6 @@
+#files
+.DS_Store
+sftp-config.json
+
+#file types
+*.sublime-workspace
