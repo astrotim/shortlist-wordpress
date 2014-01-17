@@ -1,5 +1,16 @@
 var $ = jQuery; // because we are using WP's noConflict mode jQuery
 
+// log() by Paul Irish stops console.log() breaking Ajax in IE
+// http://paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
+window.log = function(){
+  log.history = log.history || [];   // store logs to an array for reference
+  log.history.push(arguments);
+  if(this.console){
+    console.log( Array.prototype.slice.call(arguments) );
+  }
+};
+
+
 /* contents
 --------------------------------------------
 
@@ -25,7 +36,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 
 	shortlistNavItem.append('&nbsp;(<span class="shortlist-count">0</span>)');
 
-	console.log(listCount);
+	log(listCount);
 	$('.shortlist-count').html(listCount);
 
 
@@ -45,7 +56,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 				counter.text(data);
 			},
 			error: function() {
-				console.log('error with getItemTotal function');
+				log('error with getItemTotal function');
 			}
 		});
 	};
@@ -76,7 +87,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 				itemAction 	= target.data('action');
 
 			// test bindings
-			// console.log(itemAction, itemID);
+			// log(itemAction, itemID);
 
 			$.ajax({
 				type: 'GET',
@@ -84,10 +95,10 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 				data: 'action=' + itemAction + '&id=' + itemID,
 				success: function() {
 					getItemTotal();
-					console.log(itemAction + ' item ' + itemID);
+					log(itemAction + ' item ' + itemID);
 				},
 				error: function() {
-					console.log('error with shortlistActions function', 'check that "themeDirName" has been correctly set in shortlist.js');
+					log('error with shortlistActions function', 'check that "themeDirName" has been correctly set in shortlist.js');
 				}
 			});
 
@@ -130,10 +141,10 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 				data: 'action=remove&id=' + itemID,
 				success: function() {
 					getItemTotal();
-					console.log('removed item ' + itemID);
+					log('removed item ' + itemID);
 				},
 				error: function() {
-					console.log('error with removeItem action');
+					log('error with removeItem action');
 				}
 			});
 
@@ -165,7 +176,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 					getItemTotal();
 				},
 				error: function() {
-					console.log('error with clearAll action');
+					log('error with clearAll action');
 				}
 			});
 
