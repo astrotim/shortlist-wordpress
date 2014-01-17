@@ -9,9 +9,12 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 
 */
 
+// theme directory name
+	var themeDirName = 'shortlist-wordpress';
+
 // path to ajax file
-	var homeURL = window.location.protocol + "//" + window.location.host + "/";
-	var	filePath = homeURL + 'wp-content/themes/shortlist/includes/';
+	var homeURL = window.location.protocol + "//" + window.location.host + "/",
+		filePath = homeURL + 'wp-content/themes/' + themeDirName + '/includes/';
 
 
 /* craete counter for Shortlist nav item
@@ -28,7 +31,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 
 
 
-/* Update the shortlist counter 
+/* Update the shortlist counter
 ----------------------------------------------------------------------------- */
 
 	function getItemTotal() {
@@ -43,7 +46,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 			},
 			error: function() {
 				console.log('error with getItemTotal function');
-			}			
+			}
 		});
 	};
 
@@ -58,11 +61,11 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 	function has 'button' parameter so jQuery object
 	can be passed in and run via $(button).on('click'...)
 
-	this allows for infinite scroll to apply the ajax method 
+	this allows for infinite scroll to apply the ajax method
 	to the new content (moreContent)
 
 ----------------------------------------------------------------------------- */
-	
+
 	function shortlistActions(button) {
 
 		$(button).on('click', function(e) {
@@ -151,7 +154,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 ----------------------------------------------------------------------------- */
 
 	function clearAll() {
-		
+
 		$('.shortlist-clear a').on('click', function(e) {
 
 			$.ajax({
@@ -166,9 +169,9 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 				}
 			});
 
-			e.preventDefault();		
+			e.preventDefault();
 		});
-	} // end 
+	} // end
 
 	clearAll();
 
