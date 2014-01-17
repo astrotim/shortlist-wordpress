@@ -87,7 +87,7 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 					console.log(itemAction + ' item ' + itemID);
 				},
 				error: function() {
-					console.log('error with shortlistActions function');
+					console.log('error with shortlistActions function', 'check that "themeDirName" has been correctly set in shortlist.js');
 				}
 			});
 
