@@ -13,17 +13,21 @@ get_header();
 	// get session array
 	$shortlist = array(0);
 
-	if(isset($_SESSION['shortlist'])) {
+	if( isset($_SESSION['shortlist']) && (!empty($_SESSION['shortlist'])) ) {
 		$shortlist = $_SESSION['shortlist'];
-	}
 
-	$args = array (
-		'post_type' => 'post',
-		'orderby' => 'title',			
-		'order' => 'asc',
-	    'post__in' => $shortlist,
-		// 'posts_per_page' => 24
-	);
+		$args = array (
+			'post_type' => 'post',
+			'orderby' => 'title',			
+			'order' => 'asc',
+		    'post__in' => $shortlist,
+		);
+
+	} else {
+
+		$args = array();
+
+	}
 
 	$wp_query = new WP_Query( $args );
 
