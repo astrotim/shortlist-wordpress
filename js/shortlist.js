@@ -24,13 +24,8 @@ window.log = function(){
 	var themeDirName = 'shortlist-wordpress';
 
 // path to ajax file
-<<<<<<< HEAD
-	var homeURL = window.location.protocol + "//" + window.location.host + "/";
-	var	filePath = homeURL + 'shortlist/wp-content/themes/shortlist/includes/';
-=======
 	var homeURL = window.location.protocol + "//" + window.location.host + "/",
 		filePath = homeURL + 'wp-content/themes/' + themeDirName + '/includes/';
->>>>>>> origin/master
 
 
 /* craete counter for Shortlist nav item
