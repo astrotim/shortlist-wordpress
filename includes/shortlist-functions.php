@@ -26,7 +26,7 @@
 				'shortlist', // handle	
 				get_bloginfo('template_directory') . '/js/shortlist.js', // path
 				array('jquery'), // dependency
-				'1', 	// version
+				'4', 	// version
 				true // load via wp_footer
 			);
 		}
@@ -38,7 +38,7 @@
 // Debug -------------------------------------------------------------------------------- //
 
 	function debug_shortlist() {
-		echo '<br><pre class="entry-content">';
+		echo '<pre>';
 		if(!empty($_SESSION['shortlist'])) {
 			print_r($_SESSION['shortlist']);
 		} else {

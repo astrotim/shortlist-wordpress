@@ -11,13 +11,13 @@ var $ = jQuery; // because we are using WP's noConflict mode jQuery
 
 // path to ajax file
 	var homeURL = window.location.protocol + "//" + window.location.host + "/";
-	var	filePath = homeURL + 'wp-content/themes/shortlist/includes/';
+	var	filePath = homeURL + 'shortlist/wp-content/themes/shortlist/includes/';
 
 
 /* craete counter for Shortlist nav item
 ----------------------------------------------------------------------------- */
 
-	var shortlistNavItem = $('.navbar li a[href$="/shortlist/"]'),
+	var shortlistNavItem = $('.navbar li a[href$="index.php/shortlist/"]'),
 		listCount = $('body').data('count');
 
 	shortlistNavItem.append('&nbsp;(<span class="shortlist-count">0</span>)');
