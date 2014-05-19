@@ -60,6 +60,8 @@ get_header();
 
 		</ul>
 
+		<p class="shortlist-clear"><a class="btn btn-danger" href="#">Clear All</a></p>
+
 <?php else : ?>
 
 <p>No items selected.</p>
