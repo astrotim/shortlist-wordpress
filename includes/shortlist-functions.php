@@ -26,7 +26,7 @@
 				'shortlist', // handle	
 				get_bloginfo('template_directory') . '/js/shortlist.js', // path
 				array('jquery'), // dependency
-				'2', 	// version
+				'2014-05-19', 	// version
 				true // load via wp_footer
 			);
 		}

@@ -13,7 +13,7 @@
 
 	function scripts_and_styles() {
 
-		wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), '2013-07-18' );
+		wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), '2014-05-19' );
 
 	}
 	add_action( 'wp_enqueue_scripts', 'scripts_and_styles' );
