@@ -15,7 +15,8 @@ window.log = function(){
 /* shortlist methods
 ----------------------------------------------------------------------------- */
 
-var shortlist = (function($) { // constructor function
+// namespacing function object
+var shortlist = (function($) {
 
 
   // define object literal container for parameters and methods
